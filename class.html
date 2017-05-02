@@ -50,6 +50,8 @@
           <h2>Intro to Software Development in Javascript</h2>
           <h3>Sources derived from:</h3>
           <img src="dist/img/circle-gdi-logo.png" alt="GDI Logo" class="noborder" style="max-height:200px;">
+          <h3>Slides at:</h3>
+          <p><a href="https://wyantb.github.io/gdi-featured-js-intro/class.html">https://wyantb.github.io/gdi-featured-js-intro/class.html</a></p>
         </section>
 
         <section>
@@ -148,10 +150,8 @@
         </section>
 
         <section>
-            <h3>Throwing you into the deep end</h3>
-            <h4>Every program is broken by default.</h4>
-            <h4>Learn to march on through the uncertainty</h4>
-            <img src="dist/img/jsbin-error.png">
+            <h3>Throwing you into the deep end soon...</h3>
+            <h4>First, a quick review / primer on basic JS concepts</h4>
         </section>
 
         <section>
@@ -159,14 +159,23 @@
           <p>Just like 'x' in algebra, a variable is a named container for a value</p>
           <p>To declare (create) a variable, just type the word <code>const</code> and the variable name.</p>
 <pre><code class="javascript">const numberOfKittens = 5;</code></pre>
-          <p>It is a good idea to give your variable a starting value. This is called initializing the variable.</p>
+          <p>Giving your variables a starting value - here, <code>5</code>, is called initializing the variable.</p>
         </section>
 
         <section>
-          <h3>Building Block: Variable Data Types</h3>
+          <h3>Building Block: Methods</h3>
+          <p>Methods *do* things</p>
+          <p>You've seen one method already: console.log, which prints to the console</p>
+<pre><code class="javascript">const numberOfKittens = 5;
+console.log(numberOfKittens);</code></pre>
+        </section>
+
+        <section>
+          <h3>Building Block: Variable Types</h3>
           <ul>
             <li><b>string</b> string of characters
-              <pre><code class="javascript">const userName = 'Jane Lane';</code></pre>
+              <pre><code class="javascript">const userName = 'Jane Lane';
+console.log(userName);</code></pre>
             </li>
             <li><b>number</b> integer or floating point
               <pre><code class="javascript">const myAge = 30;</code></pre>
@@ -190,14 +199,6 @@ console.log(personJane.firstName);</code></pre>
         </section>
 
         <section>
-          <h3>Building Block: Methods</h3>
-          <p>Methods *do* things</p>
-          <p>You've seen one method already: console.log, which prints to the console</p>
-<pre><code class="javascript">const numberOfKittens = 5;
-console.log(numberOfKittens);</code></pre>
-        </section>
-
-        <section>
           <h3>Building Block: Methods 2</h3>
           <p>Here's a new method: Math.random(), that returns a decimal between 0 and 1</p>
           <p>Try running this one multiple times!</p>
@@ -206,31 +207,28 @@ console.log(randomNumber);</code></pre>
         </section>
 
         <section>
+          <h3>Building Block: Comments</h3>
+          <p>Comments are ignored by the computer</p>
+<pre><code class="javascript">const myFavoriteNumber = 5; // Is it really?
+// I can write anything I want here
+console.log(myFavoriteNumber);</code></pre>
+        </section>
+
+        <section>
           <h3>Building Block: Methods 3</h3>
-          <p>And you can make your own functions</p>
-<pre><code class="javascript">function greetPerson(name) {
+          <p>And you can make your own functions (two new building blocks here!)</p>
+<pre><code class="javascript">const janesName = "Jane " + "Doe"; // What is "string concatenation" in your words?
+console.log(janesName);
+function greetPerson(name) { // Your method
     const greeting = "Hello, " + name;
     console.log(greeting);
 }
-console.log(greetPerson("Jane Doe"));</code></pre>
+console.log(greetPerson(janesName));</code></pre>
         </section>
 
         <section>
-          <h3>Building Block: Control Statements - If</h3>
-          <p>Try running this one multiple times!</p>
-<pre><code class="javascript">const randomNumber = Math.random() * 5;
-const isUnderThree = randomNumber &lt; 3;
-console.log(isUnderThree);
-if (isUnderThree) {
-    console.log("The number is under 3");
-} else {
-    console.log("The number is above 3");
-}</code></pre>
-        </section>
-
-        <section>
-          <h3>Building Block: Arithmetic Operators</h3>
-          <p>Once you have numbers, you can do math with them!</p>
+          <h3>Building Block: Operators</h3>
+          <p>Once you have variables, you can do math with them, or compare them to other things</p>
           <table>
             <thead>
               <tr>
@@ -270,42 +268,72 @@ if (isUnderThree) {
                 <td>Modulus</td>
                 <td>Remainder of <code>a</code> divided by <code>b</code>.</td>
               </tr>
+              <tr>
+                <td><code>a &lt; b</code></td>
+                <td>Less than</td>
+                <td>Gives <code>true</code> if a is less than b, <code>false</code> otherwise</td>
+              </tr>
+              <tr>
+                <td><code>a &gt; b</code></td>
+                <td>Greater than</td>
+                <td>Gives <code>true</code> if a is greater than b, <code>false</code> otherwise</td>
+              </tr>
             </tbody>
           </table>
         </section>
 
-        <section>
-          <h3>Let's Develop It</h3>
-          <p>Create a program to calculate the tip at a restaurant. It should:</p>
-          <ul>
-            <li>Have variables for the bill <b>pre-tip</b> and the <b>tip percentage</b>.</li>
-            <li>Calculate the total bill.</li>
-            <li>Output a sentence like "Your total bill, with tip, is $14.75".</li>
-            <li>Bonus: Use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed" target="_blank"><code>toFixed()</code></a> to round the bill total to 2 decimals.</li>
-          </ul>
-        </section>
 
-      <!-- Final slides-->
         <section>
-          <h3>You did it!</h3>
-          <img src="dist/img/celebration.jpg" alt="People celebrating"/>
-          <p class="credit">
-            <small>Photo credit: <a href="http://www.flickr.com/photos/morphomir/2407451929/" target="_blank">Mircea</a> <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">cc</a></small>
-          </p>
+          <h3>Building Block: Control Statements - If</h3>
+          <p>Try running this one multiple times!</p>
+<pre><code class="javascript">const randomNumber = Math.random() * 5;
+const isUnderThree = randomNumber &lt; 3;
+console.log(isUnderThree);
+if (isUnderThree) {
+    console.log("The number is under 3");
+} else {
+    console.log("The number is above 3");
+}</code></pre>
         </section>
 
         <section>
-          <h3>Resources</h3>
+            <h3>Pencils down now</h3>
+            <p>Skipping a lot of steps, allow me to preview a few more advanced building blocks</p>
+        </section>
+
+        <section>
+            <h3>Advanced Building Block: Different Programming Languages</h3>
+            <p>Almost all programming languages have some concept of variables</p>
+            <p>How are variables declared in different languages?</p>
+            <p>What data types are available in different languages?</p>
+            <p>Note the similarities where you can, since they help you build on what you've already learned</p>
+            <p>(Don't be intimidated by this!  You don't need to know these answers now!)</p>
+        </section>
+
+        <section>
+            <h3>Expert Building Block: APIs</h3>
+            <p>(That's "Application Programming Interface")</p>
+            <p>Once you learn how one method functions, it doesn't change</p>
+            <p>With a well designed API, learning some functions helps you learn others</p>
+            <p>(Don't be intimidated by the jargon!  <code>console</code> is an API we've used already - <code>console.log</code> specifically.  As you learn more, API selection, evaluation, and usage become important topics.  For now, you're learning just by knowing the term exists)</p>
+        </section>
+
+        <section>
+            <h3>Throwing you into the deep end</h3>
+            <h4>Every program is broken by default - experts just hide their mistakes better</h4>
+            <img src="dist/img/jsbin-error.png">
+            <h4>Learn to march on through the uncertainty</h4>
+            <p><a href="http://jsbin.com/?js,console">http://jsbin.com/?js,console</a></p>
+        </section>
+
+        <section>
+          <h3>Questions?  And resources:</h3>
           <p><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Code Academy</a>, with interactive lessons to help you review.</p>
           <p>Others:</p>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
               <li><a href="http://jsforcats.com/">JavaScript For Cats,</a> the basics of JavaScript explained with extra cats.</li>
             </ul>
-        </section>
-
-        <section>
-          <h2>Questions?</h2>
         </section>
     </div>
     <footer>
