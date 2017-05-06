@@ -186,8 +186,8 @@
         <section>
           <h3>Building Block: Variables</h3>
           <p>Just like 'x' in algebra, a variable is a named container for a value</p>
-          <p>To declare (create) a variable, just type the word <code>const</code> and the variable name.</p>
-<pre><code class="javascript">const numberOfKittens = 5;</code></pre>
+          <p>To declare (create) a variable, just type the word <code>let</code> and the variable name.</p>
+<pre><code class="javascript">let numberOfKittens = 5;</code></pre>
           <p>Giving your variables a starting value - here, <code>5</code>, is called initializing the variable.</p>
         </section>
 
@@ -195,7 +195,7 @@
           <h3>Building Block: Methods</h3>
           <p>Methods *do* things</p>
           <p>You've seen one method already: console.log, which prints to the console</p>
-<pre><code class="javascript">const numberOfKittens = 5;
+<pre><code class="javascript">let numberOfKittens = 5;
 console.log(numberOfKittens);</code></pre>
         </section>
 
@@ -203,25 +203,25 @@ console.log(numberOfKittens);</code></pre>
           <h3>Building Block: Variable Types</h3>
           <ul>
             <li><b>string</b> string of characters
-              <pre><code class="javascript">const userName = 'Jane Lane';
+              <pre><code class="javascript">let userName = 'Jane Lane';
 console.log(userName);</code></pre>
             </li>
             <li><b>number</b> integer or floating point
-              <pre><code class="javascript">const myAge = 30;</code></pre>
+              <pre><code class="javascript">let myAge = 30;</code></pre>
             </li>
             <li><b>boolean</b> true or false
-              <pre><code class="javascript">const catsAreBest = true;</code></pre>
+              <pre><code class="javascript">let catsAreBest = true;</code></pre>
             </li>
             <li><b>null</b> an explicitly empty value
-              <pre><code class="javascript">const goodPickupLines = null;</code></pre>
+              <pre><code class="javascript">let goodPickupLines = null;</code></pre>
             </li>
             <li><b>array</b> a list of values - more advanced!
-              <pre><code class="javascript">const someNumbers = [1, 2, 3];
+              <pre><code class="javascript">let someNumbers = [1, 2, 3];
 console.log(someNumbers[0], someNumbers[1], someNumbers[2]);
 console.log(someNumbers.join(", and also: "));</code></pre>
             </li>
             <li><b>object</b> a container of named values - yet more advanced!
-              <pre><code class="javascript">const personJane = { firstName: 'Jane', lastName: 'Lane' };
+              <pre><code class="javascript">let personJane = { firstName: 'Jane', lastName: 'Lane' };
 console.log(personJane.firstName);</code></pre>
             </li>
           </ul>
@@ -231,14 +231,14 @@ console.log(personJane.firstName);</code></pre>
           <h3>Building Block: Methods 2</h3>
           <p>Here's a new method: Math.random(), that returns a decimal between 0 and 1</p>
           <p>Try running this one multiple times!</p>
-<pre><code class="javascript">const randomNumber = Math.random();
+<pre><code class="javascript">let randomNumber = Math.random();
 console.log(randomNumber);</code></pre>
         </section>
 
         <section>
           <h3>Building Block: Comments</h3>
           <p>Comments are ignored by the computer</p>
-<pre><code class="javascript">const myFavoriteNumber = 5; // Is it really?
+<pre><code class="javascript">let myFavoriteNumber = 5; // Is it really?
 // I can write anything I want here
 console.log(myFavoriteNumber);</code></pre>
         </section>
@@ -246,10 +246,10 @@ console.log(myFavoriteNumber);</code></pre>
         <section>
           <h3>Building Block: Methods 3</h3>
           <p>And you can make your own functions (two new building blocks here!)</p>
-<pre><code class="javascript">const janesName = "Jane " + "Doe"; // What is "string concatenation" in your words?
+<pre><code class="javascript">let janesName = "Jane " + "Doe"; // What is "string concatenation" in your words?
 console.log(janesName);
 function greetPerson(name) { // Your method
-    const greeting = "Hello, " + name;
+    let greeting = "Hello, " + name;
     console.log(greeting);
 }
 console.log(greetPerson(janesName));</code></pre>
@@ -315,8 +315,8 @@ console.log(greetPerson(janesName));</code></pre>
         <section>
           <h3>Building Block: Control Statements - If</h3>
           <p>Try running this one multiple times!</p>
-<pre><code class="javascript">const randomNumber = Math.random() * 5;
-const isUnderThree = randomNumber &lt; 3;
+<pre><code class="javascript">let randomNumber = Math.random() * 5;
+let isUnderThree = randomNumber &lt; 3;
 console.log(isUnderThree);
 if (isUnderThree) {
     console.log("The number is under 3");
@@ -344,6 +344,7 @@ if (isUnderThree) {
             <p>As developers work in a language for more time, though, they'll notice common mistakes</p>
             <p>Validators like ESLint allow you to learn from other developers' best practices and help you avoid mistakes</p>
             <p>ESLint has a pretty high quality site - <a href="http://eslint.org/docs/user-guide/getting-started">so check it out</a></p>
+            <p>Can be used to eliminate one type of "beginner mistakes" entirely - sloppy formatting, like <a href="http://www.creativebloq.com/web-design/beginner-programming-mistakes-1132856">http://www.creativebloq.com/web-design/beginner-programming-mistakes-1132856</a></p>
         </section>
 
         <section>
